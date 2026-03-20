@@ -100,3 +100,9 @@ cd toastmasters-production-backend
 ./gradlew clean build
 ./gradlew bootRun
 
+#APIs
+
+GET    /api/topics
+GET    /api/topics/search
+POST   /api/topics
+

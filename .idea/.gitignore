@@ -1,0 +1,29 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+
+# Build output
+/build/
+out/
+
+# Gradle
+.gradle/
+!gradle/wrapper/gradle-wrapper.jar
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE (keep minimal)
+.idea/
+*.iml
+
+# Environment files
+.env
+.env.*
+
+# Generated files
+*.class

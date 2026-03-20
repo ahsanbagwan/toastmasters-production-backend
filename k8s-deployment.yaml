@@ -1,0 +1,33 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: toastmasters-backend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: toastmasters
+  template:
+    metadata:
+      labels:
+        app: toastmasters
+    spec:
+      containers:
+        - name: toastmasters
+          image: your-dockerhub/toastmasters:latest
+          ports:
+            - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: toastmasters-service
+spec:
+  selector:
+    app: toastmasters
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
+  type: ClusterIP
